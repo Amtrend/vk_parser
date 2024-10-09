@@ -34,9 +34,9 @@ def main(arr_rul):
                 api.start()
             except Exception as e:
                 api.stop()
-                print(f"ошибка при стримминге - {e}")
+                print(f"Error while streaming - {e}")
     except Exception as e:
-        print(f"ошибка при получении ключа - {e}")
+        print(f"Error receiving key - {e}")
 
 
 if __name__ == "__main__":
@@ -47,4 +47,4 @@ if __name__ == "__main__":
                 data = json.load(file)
             main(arr_rul=data)
         except Exception as e:
-            print(f"ошибка при запуске скрипта - {e}")
+            print(f"Error when running script - {e}")
