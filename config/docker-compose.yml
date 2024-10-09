@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  vk_parser:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ../code:/code_app
+    networks:
+      - vk_parser_default
+    env_file:
+      - .env
+
+networks:
+  vk_parser_default:
